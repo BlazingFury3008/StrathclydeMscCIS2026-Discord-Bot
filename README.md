@@ -5,4 +5,4 @@ This is a collaboration project between MsC CIS Students from Strathclyde 2026
 - [Andrew Kennedy](https://github.com/kennedyandrew18-blip)
 
 ### Features
-`run.sh` - This will run the program on Linux machines, creating the structure required for the .env file. Keep in mind, if the values are not filled in, the bot will not run properly
+`run.sh` - This will run the program on a Unix based OS, creating the structure required for the .env file. The first run will create the .env file, then it will need to be run again to run the program. Although you can run the application with `python app/main.py`, the code will not run properly
