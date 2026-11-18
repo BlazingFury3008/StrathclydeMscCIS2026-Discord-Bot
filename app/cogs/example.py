@@ -46,4 +46,17 @@ class ExampleCog(commands.Cog):
         sleep(3) # Simulating a long running process, such as a database query or API call etc
         main_logger.info(f"Finished processing Example Delayed Command from {interaction.user}")
         await interaction.followup.send("This is an example command that responds after a delay")
+        
+    @app_commands.command(name="input_example", description="This is an example command that takes an input")
+    @app_commands.describe(input="This is an example input") # This is used to tell the user what the input parameter is
+    async def input_example_command(self, interaction: discord.Interaction, input: str):
+        """This is an example of a command that takes an input from a user
+
+        Args:
+            interaction (discord.Interaction): _description_
+            input (str): _description_
+        """
+        
+        main_logger.info(f"Recieved Example Input Command from {interaction.user} with input: {input}")
+        await interaction.response.send_message(f"{interaction.user}, You said {input}")
     
